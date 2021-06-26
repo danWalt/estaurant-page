@@ -1,0 +1,24 @@
+
+#title {
+    color: aquamarine;
+}
+
+header {
+    text-align: center;
+    background-color: #4c5c68;
+    width: 100%;
+    position: relative;
+    margin:0;
+    padding:0;
+    background-image: url('../images/coffeebeans.jpg') ;
+}
+
+h1 {
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-bottom: 20px;
+  }
+
+ul {
+    position: center;
+}
