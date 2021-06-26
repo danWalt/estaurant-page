@@ -69,8 +69,12 @@ function buildWebsite(){
         const coverContact = document.createElement('div')
         
         coverHome.setAttribute('id', 'coverHome')
+        coverHome.classList.add('cover')
         coverMenu.setAttribute('id', 'coverMenu')
+        coverMenu.classList.add('cover')
         coverContact.setAttribute('id', 'coverContact')
+        coverContact.classList.add('cover')
+
 
         nav.appendChild(coverHome)
         nav.appendChild(coverMenu)
@@ -82,17 +86,25 @@ function buildWebsite(){
         home.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createHomePage())
+            //addHiddenClass(document.getElementById('coverHome'))
         })
         menu.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createMenuPage())
+            //addHiddenClass(document.getElementById('coverMenu'))
         })
         contact.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createContactPage())
+            //addHiddenClass(document.getElementById('coverContact'))
         })
     }
+    
+    //TODO: add hidden class to clicked li item and remove from other li
+    function addHiddenClass (element){
+        document.getElementById(element).classList.add('hidden')
 
+    }
 
 //     function createFooter() {
 //         const footer = document.createElement('footer')

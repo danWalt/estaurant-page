@@ -10,7 +10,23 @@ header {
     position: relative;
     margin:0;
     padding:0;
-    background-image: url('../images/coffeebeans.jpg') ;
+   /*background-image: url('../images/coffeebeans.jpg') ;*/
+}
+
+nav {
+    position: relative;
+
+}
+
+.cover {
+    position: center;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.hidden {
+    background-color: cadetblue;
 }
 
 h1 {
@@ -20,5 +36,24 @@ h1 {
   }
 
 ul {
+    display: flex;
     position: center;
+}
+
+li {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: 20px;
+    padding-top: 8px;
+}
+
+.text-box {
+    border: 1px solid black;
+    border: 1px solid black;
+    border: 1px solid black;
+    border-radius: 5px 5px 0px 0px;
+    margin: 10px;
+    padding-top: 8px;
 }
