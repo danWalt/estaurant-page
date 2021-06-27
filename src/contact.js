@@ -5,7 +5,6 @@ function createContactPage (){
         const content = document.createElement('div')
         content.setAttribute('id', 'content')
 
-        content.innerText = 'Contact page'
 
         return content
 

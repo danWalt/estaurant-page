@@ -5,7 +5,6 @@ function createMenuPage (){
         const content = document.createElement('div')
         content.setAttribute('id', 'content')
 
-        content.innerText = 'Menu page'
 
         return content
 

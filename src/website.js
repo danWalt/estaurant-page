@@ -12,8 +12,6 @@ function buildWebsite(){
         const nav = createNav()
         const tabList = createTabList()
 
-        createCovers(nav)
-
         nav.appendChild(tabList)
         header.appendChild(nav)
         document.body.appendChild(header)
@@ -23,7 +21,7 @@ function buildWebsite(){
     function createHeader(){
         const header = document.createElement('header')
         const atlasCoffee = document.createElement('h1')
-        atlasCoffee.innerText = 'Atlas Coffee'
+        atlasCoffee.innerText = 'Atlas'
         atlasCoffee.setAttribute('id', 'title')
         header.appendChild(atlasCoffee)
 
@@ -47,63 +45,56 @@ function buildWebsite(){
         tabList.appendChild(home)
         tabList.appendChild(menu)
         tabList.appendChild(contact)
-
-        addListeners(home,menu,contact) 
         
         return tabList
     }
 
     function setHeaderLiItems(home, menu, contact) {
         home.innerText = 'Home'
-        menu.innerText = 'menu'
-        contact.innerText = 'contact'
+        menu.innerText = 'Menu'
+        contact.innerText = 'Contact'
 
         home.setAttribute('id', 'home')
+        home.classList.add('hidden')
         menu.setAttribute('id', 'menu')
         contact.setAttribute('id', 'contact')
-    }
+
+        addListeners(home,menu,contact) 
+
+    }   
     
-    function createCovers(nav){
-        const coverHome = document.createElement('div')
-        const coverMenu = document.createElement('div')
-        const coverContact = document.createElement('div')
-        
-        coverHome.setAttribute('id', 'coverHome')
-        coverHome.classList.add('cover')
-        coverMenu.setAttribute('id', 'coverMenu')
-        coverMenu.classList.add('cover')
-        coverContact.setAttribute('id', 'coverContact')
-        coverContact.classList.add('cover')
-
-
-        nav.appendChild(coverHome)
-        nav.appendChild(coverMenu)
-        nav.appendChild(coverContact)
-    }
-
 
     function addListeners(home,menu,contact) {
         home.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createHomePage())
-            //addHiddenClass(document.getElementById('coverHome'))
+            setHidden([home,menu,contact], home)
+
         })
         menu.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createMenuPage())
-            //addHiddenClass(document.getElementById('coverMenu'))
+            setHidden([home,menu,contact], menu)
+
         })
         contact.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createContactPage())
-            //addHiddenClass(document.getElementById('coverContact'))
+            setHidden([home,menu,contact], contact)
         })
     }
     
-    //TODO: add hidden class to clicked li item and remove from other li
-    function addHiddenClass (element){
-        document.getElementById(element).classList.add('hidden')
 
+    function setHidden(tabList, tab) {
+        
+        tabList.forEach(element => {
+            if (element == tab) {
+                tab.classList.add('hidden')
+            }
+            else {
+                element.classList.remove('hidden');
+            }
+        });
     }
 
 //     function createFooter() {

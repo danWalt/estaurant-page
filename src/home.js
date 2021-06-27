@@ -4,7 +4,6 @@ function createHomePage (){
     function loadHomePage() {
         const content = document.createElement('div')
         content.setAttribute('id', 'content')
-        content.innerText = 'Home page'
 
         createAboutDiv(content)
         createOpeningHoursDiv(content)
@@ -25,7 +24,11 @@ function createHomePage (){
 
             const aboutText = document.createElement('p')
             aboutText.classList.add('text')
-            aboutText.innerText = 'This is the about section'
+            aboutText.innerText = 'The place has been operating since 1924 and ' +
+            'was established by immigrants from Thessaloniki. 30 years ' + 
+            'ago by David and Juliette Refaeli started running the place and have kept on doing so ever since. Apart from dozens of types ' + 
+            'of spices like black mustard seeds and organic flax there are also herbs and even ' + 
+            'amber that is made from whales and is beneficial according to the belief in male potency.'
 
             aboutDiv.appendChild(aboutH3)
             aboutDiv.appendChild(aboutText)
@@ -44,7 +47,13 @@ function createHomePage (){
 
             const openingHoursText = document.createElement('p')
             openingHoursText.classList.add('text')
-            openingHoursText.innerText = 'This is the opening hours section'
+            openingHoursText.innerText = 'Sunday: 7:30am–7:30pm' + '\n'
+            + 'Monday: 7:30am–7:30pm' + '\n'
+            + 'Tuesday: 7:30am–7:30pm' + '\n'
+            + 'Wednesday: 7:30am–7:30pm' + '\n'
+            + 'Thursday: 7:30am–7:30pm' + '\n'
+            + 'Friday: 7:30am–3pm' + '\n'
+            + 'Saturday: Closed' + '\n'
 
             openingHoursDiv.appendChild(openingHoursH3)
             openingHoursDiv.appendChild(openingHoursText)
@@ -62,7 +71,7 @@ function createHomePage (){
     
             const locationText = document.createElement('p')
             locationText.classList.add('text')
-            locationText.innerText = '123 Forest Drive, Forestville, Maine'
+            locationText.innerText = '49 Levinsky Street, Levinsky Market Tel Aviv '+ '\n' + '03-6824614'
     
     
             locationDiv.appendChild(locationH3)
