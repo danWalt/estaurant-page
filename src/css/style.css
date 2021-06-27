@@ -1,19 +1,19 @@
 
 #title {
-    color: aquamarine;
+    color: #CEFDFF;
 }
 
 
 body {
-   /*background-image: url('../images/coffeebeans.jpg') ;
-    background-size: 100%;*/
-    font-size: medium;
+    background-color: #76949F;
+    color: #533747;
+    font-size: 20px;
 }
 
 header {
+    display: block;
     text-align: center;
-    background-color: #4c5c68;
-    width: 100%;
+    background-color: #86BBBD;
     position: relative;
     margin:0;
     padding:0;
@@ -21,7 +21,6 @@ header {
 
 nav {
     position: relative;
-
 }
 
 .cover {
@@ -39,6 +38,7 @@ h1 {
     margin: 0 auto;
     padding: 0 auto;
     margin-bottom: 20px;
+    text-align: center;
   }
 
 ul {
@@ -55,11 +55,20 @@ li {
     padding-top: 8px;
 }
 
+#content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
 .text-box {
     border: 1px solid black;
-    border: 1px solid black;
-    border: 1px solid black;
-    border-radius: 5px 5px 0px 0px;
-    margin: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-top: 8px;
+    width: 50%;
 }
