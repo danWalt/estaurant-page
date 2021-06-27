@@ -40,7 +40,6 @@ ul {
     display: flex;
     position: center;
     list-style-type: none;
-
 }
 
 li {
@@ -62,5 +61,11 @@ li {
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 8px;
-    width: 600px;
+    width: 40%;
+    font-size: 30px;
+}
+
+img {
+    width: 40%;
+    padding-top: 10px;
 }

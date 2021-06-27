@@ -1,6 +1,6 @@
 import createHomePage from './home.js'
 import createContactPage from './contact.js'
-import createMenuPage from './menu.js'
+import createProductsPage from './products.js'
 
 require('./css/style.css');
 
@@ -36,51 +36,52 @@ function buildWebsite(){
     function createTabList(){
         const tabList = document.createElement('ul')
         const home = document.createElement('li')
-        const menu = document.createElement('li')
+        const products = document.createElement('li')
         const contact = document.createElement('li')
 
-        setHeaderLiItems(home, menu, contact)
+        setHeaderLiItems(home, products, contact)
 
         tabList.classList.add('tab-list')
         tabList.appendChild(home)
-        tabList.appendChild(menu)
+        tabList.appendChild(products)
         tabList.appendChild(contact)
         
         return tabList
     }
 
-    function setHeaderLiItems(home, menu, contact) {
+    function setHeaderLiItems(home, products, contact) {
         home.innerText = 'Home'
-        menu.innerText = 'Menu'
+        products.innerText = 'Products'
         contact.innerText = 'Contact'
 
         home.setAttribute('id', 'home')
         home.classList.add('hidden')
-        menu.setAttribute('id', 'menu')
+        products.setAttribute('id', 'products')
         contact.setAttribute('id', 'contact')
 
-        addListeners(home,menu,contact) 
+        addListeners(home,products,contact) 
 
     }   
     
 
-    function addListeners(home,menu,contact) {
+    function addListeners(home,products,contact) {
         home.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createHomePage())
-            setHidden([home,menu,contact], home)
-
+            setHidden([home,products,contact], home)
         })
-        menu.addEventListener('click', () => {
+
+        products.addEventListener('click', () => {
             content.parentNode.removeChild(content)
-            document.body.appendChild(createMenuPage())
-            setHidden([home,menu,contact], menu)
+            document.body.appendChild(createProductsPage())
+            setHidden([home,products,contact], products)
 
         })
+        
         contact.addEventListener('click', () => {
             content.parentNode.removeChild(content)
             document.body.appendChild(createContactPage())
-            setHidden([home,menu,contact], contact)
+            setHidden([home,products,contact], contact)
         })
     }
     

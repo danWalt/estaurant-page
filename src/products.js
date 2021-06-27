@@ -1,4 +1,4 @@
-function createMenuPage (){
+function createProductsPage (){
     const content = loadMenuPage()
 
     function loadMenuPage() {
@@ -14,4 +14,4 @@ function createMenuPage (){
    return content
 } 
 
-export default createMenuPage;
+export default createProductsPage;

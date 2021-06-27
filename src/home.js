@@ -5,9 +5,9 @@ function createHomePage (){
         const content = document.createElement('div')
         content.setAttribute('id', 'content')
 
+        addImage(content)
         createAboutDiv(content)
-        createOpeningHoursDiv(content)
-        createLocationDiv(content)
+
 
         return content
 
@@ -33,52 +33,20 @@ function createHomePage (){
             aboutDiv.appendChild(aboutH3)
             aboutDiv.appendChild(aboutText)
             content.appendChild(aboutDiv)
+        }     
 
-        }
-          
-        function createOpeningHoursDiv(content) {
-            
-            const openingHoursDiv = document.createElement('div')
-            openingHoursDiv.setAttribute('id', 'opening-hours')
-            openingHoursDiv.classList.add('text-box')
-    
-            const openingHoursH3 = document.createElement('h3')
-            openingHoursH3.innerText = 'Opening Hours'
+        function addImage(content) {
+            const imageDiv = document.createElement('div')
+            imageDiv.setAttribute('id', 'home-img')
+            imageDiv.classList.add('img-div')
 
-            const openingHoursText = document.createElement('p')
-            openingHoursText.classList.add('text')
-            openingHoursText.innerText = 'Sunday: 7:30am–7:30pm' + '\n'
-            + 'Monday: 7:30am–7:30pm' + '\n'
-            + 'Tuesday: 7:30am–7:30pm' + '\n'
-            + 'Wednesday: 7:30am–7:30pm' + '\n'
-            + 'Thursday: 7:30am–7:30pm' + '\n'
-            + 'Friday: 7:30am–3pm' + '\n'
-            + 'Saturday: Closed' + '\n'
+            const img = document.createElement('img')
+            img.src = 'src\\images\\atlas2.jpg'
 
-            openingHoursDiv.appendChild(openingHoursH3)
-            openingHoursDiv.appendChild(openingHoursText)
-            content.appendChild(openingHoursDiv)
+            imageDiv.appendChild(img)
+            content.appendChild(imageDiv)
         }
 
-        function createLocationDiv(content) {
-
-            const locationDiv = document.createElement('div')
-            locationDiv.setAttribute('id', 'lcation')
-            locationDiv.classList.add('text-box')
-    
-            const locationH3 = document.createElement('h3')
-            locationH3.innerText = 'Location'
-    
-            const locationText = document.createElement('p')
-            locationText.classList.add('text')
-            locationText.innerText = '49 Levinsky Street, Levinsky Market Tel Aviv '+ '\n' + '03-6824614'
-    
-    
-            locationDiv.appendChild(locationH3)
-            locationDiv.appendChild(locationText)
-            content.appendChild(locationDiv)
-    
-        }
 
    return content
 } 
