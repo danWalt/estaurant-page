@@ -1,7 +1,7 @@
 function createProductsPage (){
-    const content = loadMenuPage()
+    const content = loadProductsPage()
 
-    function loadMenuPage() {
+    function loadProductsPage() {
         const content = document.createElement('div')
         content.setAttribute('id', 'content')
 
