@@ -8,7 +8,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Development',
+        title: 'development',
     }),
   ],
   output: {
@@ -17,15 +17,7 @@ module.exports = {
     clean: true,
     publicPath: '/',
   },
-
   module: {
-    loaders: [
-      {
-        test: /\.css$/i,
-        loader: 'style-loader!css-loader'
-
-      }
-    ],
       rules: [
         {
             test: /\.css$/i,
