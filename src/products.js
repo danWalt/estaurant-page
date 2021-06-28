@@ -1,3 +1,7 @@
+import coffeebeans from './images/coffeebeans.jpg';
+import spices from './images/spices.jpg';
+
+
 function createProductsPage (){
     const content = loadProductsPage()
 
@@ -20,7 +24,7 @@ function createProductsPage (){
         imageDiv.classList.add('img-div')
 
         const img = document.createElement('img')
-        img.src = 'src\\images\\coffeebeans.jpg'
+        img.src = coffeebeans
 
         imageDiv.appendChild(img)
         content.appendChild(imageDiv)
@@ -32,7 +36,7 @@ function createProductsPage (){
         imageDiv.classList.add('img-div')
 
         const img = document.createElement('img')
-        img.src = 'src\\images\\spices.jpg'
+        img.src = spices
 
         imageDiv.appendChild(img)
         content.appendChild(imageDiv)

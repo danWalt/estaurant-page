@@ -1,3 +1,5 @@
+import Atlas from './images/atlas2.jpg';
+
 function createHomePage (){
     const content = loadHomePage()
 
@@ -41,7 +43,7 @@ function createHomePage (){
 
             const img = document.createElement('img')
             img.setAttribute('id', 'home-img')
-            img.src = 'src\\images\\atlas2.jpg'
+            img.src = Atlas
 
             imageDiv.appendChild(img)
             content.appendChild(imageDiv)
