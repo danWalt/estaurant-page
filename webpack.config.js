@@ -8,14 +8,14 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'development',
+        title: 'Atlas Coffee',
     }),
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, './dist'),
     clean: true,
-    publicPath: '/',
+    //publicPath: '/',
   },
   module: {
       rules: [

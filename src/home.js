@@ -37,10 +37,10 @@ function createHomePage (){
 
         function addImage(content) {
             const imageDiv = document.createElement('div')
-            imageDiv.setAttribute('id', 'home-img')
             imageDiv.classList.add('img-div')
 
             const img = document.createElement('img')
+            img.setAttribute('id', 'home-img')
             img.src = 'src\\images\\atlas2.jpg'
 
             imageDiv.appendChild(img)
